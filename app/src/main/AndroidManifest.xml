@@ -17,6 +17,13 @@
         android:theme="@style/Theme.ShopApp"
         tools:targetApi="31" >
         <activity
+            android:name=".presentation.register.RegisterActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".presentation.login.LoginActivity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".presentation.main.MainActivity"
             android:exported="true"
             android:label="@string/app_name" >

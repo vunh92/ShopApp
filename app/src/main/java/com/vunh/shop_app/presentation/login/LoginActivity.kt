@@ -19,6 +19,7 @@ import com.vunh.shop_app.presentation.common.extension.isEmail
 import com.vunh.shop_app.presentation.common.extension.showGenericAlertDialog
 import com.vunh.shop_app.presentation.common.extension.showToast
 import com.vunh.shop_app.presentation.main.MainActivity
+import com.vunh.shop_app.presentation.register.RegisterActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -125,8 +126,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun goToRegisterActivity(){
         binding.registerButton.setOnClickListener {
-            print("Move to register page")
-//            openRegisterActivity.launch(Intent(this@LoginActivity, RegisterActivity::class.java))
+            openRegisterActivity.launch(Intent(this@LoginActivity, RegisterActivity::class.java))
         }
     }
 
