@@ -1,9 +1,7 @@
-package com.vunh.shop_app.presentation.main
+package com.vunh.shop_app.presentation
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -29,11 +27,11 @@ private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val navView: BottomNavigationView = binding.navView
+        supportActionBar?.hide()
+//        setSupportActionBar(binding.toolbar)
+        val navView: BottomNavigationView = binding.root.findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         appBarConfiguration = AppBarConfiguration(setOf(
@@ -59,12 +57,12 @@ private lateinit var binding: ActivityMainBinding
         finish()
     }
 
-    private fun signOut(){
+    fun signOut(){
         sharedPrefs.clear()
         goToLoginActivity()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+   /* override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
@@ -77,7 +75,7 @@ private lateinit var binding: ActivityMainBinding
             }
             else -> super.onOptionsItemSelected(item)
         }
-    }
+    }*/
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_activity_main)

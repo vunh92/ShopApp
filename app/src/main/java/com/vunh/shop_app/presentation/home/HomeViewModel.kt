@@ -1,4 +1,4 @@
-package com.vunh.shop_app.ui.home
+package com.vunh.shop_app.presentation.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

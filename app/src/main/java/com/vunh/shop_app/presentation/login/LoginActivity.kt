@@ -18,7 +18,7 @@ import com.vunh.shop_app.domain.login.entity.LoginEntity
 import com.vunh.shop_app.presentation.common.extension.isEmail
 import com.vunh.shop_app.presentation.common.extension.showGenericAlertDialog
 import com.vunh.shop_app.presentation.common.extension.showToast
-import com.vunh.shop_app.presentation.main.MainActivity
+import com.vunh.shop_app.presentation.MainActivity
 import com.vunh.shop_app.presentation.register.RegisterActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
